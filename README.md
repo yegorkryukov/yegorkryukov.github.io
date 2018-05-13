@@ -1,71 +1,110 @@
-# [Start Bootstrap - New Age](https://startbootstrap.com/template-overviews/new-age/)
+# Unit 12 | Assignment - Web Visualization Dashboard (Lattitude)
 
-[New Age](http://startbootstrap.com/template-overviews/new-age/) is a web app landing page theme for [Bootstrap](http://getbootstrap.com/) created by [Start Bootstrap](http://startbootstrap.com/).
+## Background
 
-## Preview
+Data is more powerful when we share it with others! Let's take what we've learned about HTML and CSS to create a dashboard showing off the analysis we've done.
 
-[![New Age Preview](https://startbootstrap.com/assets/img/templates/new-age.jpg)](https://blackrockdigital.github.io/startbootstrap-new-age/)
+<img alt="Landing page large screen" src="images/landing-lg.png" width=600>
 
-**[View Live Preview](https://blackrockdigital.github.io/startbootstrap-new-age/)**
+## Lattitude - Latitude Analysis Dashboard with Attitude
 
-## Status
+For this homework we'll be creating a visualization dashboard website using visualizations we've created in a past assignment. Specifically, we'll be using the data from [HW06](../../HW06-WebAPIs).
 
-[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/BlackrockDigital/startbootstrap-new-age/master/LICENSE)
-[![npm version](https://img.shields.io/npm/v/startbootstrap-new-age.svg)](https://www.npmjs.com/package/startbootstrap-new-age)
-[![Build Status](https://travis-ci.org/BlackrockDigital/startbootstrap-new-age.svg?branch=master)](https://travis-ci.org/BlackrockDigital/startbootstrap-new-age)
-[![dependencies Status](https://david-dm.org/BlackrockDigital/startbootstrap-new-age/status.svg)](https://david-dm.org/BlackrockDigital/startbootstrap-new-age)
-[![devDependencies Status](https://david-dm.org/BlackrockDigital/startbootstrap-new-age/dev-status.svg)](https://david-dm.org/BlackrockDigital/startbootstrap-new-age?type=dev)
+In building this dashboard, we'll create individual pages for each plot and a means by which we can navigate between them. These pages will contain the visualizations and their corresponding explanations. We'll also have a landing page, a page where we can see a comparison of all of the plots, and another page where we can view the data used to build them.
 
-## Download and Installation
+### Website Requirements
 
-To begin using this template, choose one of the following options to get started:
-* [Download the latest release on Start Bootstrap](https://startbootstrap.com/template-overviews/new-age/)
-* Install via npm: `npm i startbootstrap-new-age`
-* Clone the repo: `git clone https://github.com/BlackrockDigital/startbootstrap-new-age.git`
-* [Fork, Clone, or Download on GitHub](https://github.com/BlackrockDigital/startbootstrap-new-age)
+For reference, see the ["Screenshots" section](#screenshots) below.
 
-## Usage
+The website must consist of 7 pages total, including:
 
-### Basic Usage
+* A [landing page](#landing-page) containing:
+  * An explanation of the project.
+  * Links to each visualizations page.
+* Four [visualization pages](#visualization-pages), each with:
+  * A descriptive title and heading tag.
+  * The plot/visualization itself for the selected comparison.
+  * A paragraph describing the plot and its significance.
+* A ["Comparisons" page](#comparisons-page) that:
+  * Contains all of the visualizations on the same page so we can easily visually compare them.
+  * Uses a bootstrap grid for the visualizations.
+    * The grid must be two visualizations across on screens medium and larger, and 1 across on extra-small and small screens.
+* A ["Data" page](#data-page) that:
+  * Displays a responsive table containing the data used in the visualizations.
+    * The table must be a bootstrap table component.
+    * The data must come from exporting the `.csv` file as HTML, or converting it to HTML. You may use a csv-to-html table conversion tool, e.g. [ConvertCSV](http://www.convertcsv.com/csv-to-html.htm).
 
-After downloading, simply edit the HTML and CSS files included with the template in your favorite text editor to make changes. These are the only files you need to worry about, you can ignore everything else! To preview the changes you make to the code, you can open the `index.html` file in your web browser.
+The website must, at the top of every page, have a navigation menu that:
 
-### Advanced Usage
+* Has the name of the site on the left of the nav which allows users to return to the landing page from any page.
+* Contains a dropdown on the right of the navbar named "Plots" which provides links to each individual visualization page.
+* Provides two more links on the right: "Comparisons" which links to the comparisons page, and "Data" which links to the data page.
+* Is responsive (using media queries). The nav must have similar behavior as the screenshots ["Navigation Menu" section](#navigation-menu) (notice the background color change).
 
-After installation, run `npm install` and then run `gulp dev` which will open up a preview of the template in your default browser, watch for changes to core template files, and live reload the browser when changes are saved. You can view the `gulpfile.js` to see which tasks are included with the dev environment.
+Finally, the website must be deployed to github pages.
 
-#### Gulp Tasks
+When finished, submit to BootcampSpot the links to 1) the deployed app and 2) the github repository.
 
-- `gulp` the default task that builds everything
-- `gulp dev` browserSync opens the project in your default browser and live reloads when changes are made
-- `gulp sass` compiles SCSS files into CSS
-- `gulp minify-css` minifies the compiled CSS file
-- `gulp minify-js` minifies the themes JS file
-- `gulp copy` copies dependencies from node_modules to the vendor directory
+### Considerations
 
-## Bugs and Issues
+* You may use the data from [HW06](../../HW06-WebAPIs) or choose another dataset. Alternatively, you may use the included [cities dataset](cities.csv) and pull the images from the [included notebook](WeatherPy.ipynb).
+* You must use bootstrap. This includes using the bootstrap `navbar` component for the header on every page, the bootstrap table component for the data page, and the bootstrap grid for responsiveness on the comparison page.
+* You must deploy your website to github pages, with the website working on a live, publicly accessible URL as a result.
+* Be sure to use a CSS media query for the navigation menu.
+* Be sure your website works at all window widths/sizes.
+* Feel free to take some liberty in the visual aspects, but keep the core functionality the same.
 
-Have a bug or an issue with this template? [Open a new issue](https://github.com/BlackrockDigital/startbootstrap-new-age/issues) here on GitHub or leave a comment on the [template overview page at Start Bootstrap](http://startbootstrap.com/template-overviews/new-age/).
+### Bonuses
 
-## Custom Builds
+* Use a different dataset! The requirements above still hold, but make it your own.
+* Use a bootstrap theme to customize your website. You may use a tool like [Bootswatch](https://bootswatch.com/). Make it look snazzy, give it some attitude. If using this, be sure you also meet all of the requirements listed above.
+* Add extra visualizations! The more comparisons the better, right?
+* Use meaningful glyphicons next to links in the header.
+* Have visualization navigation on every visualizations page with an active state. See the screenshots below.
 
-You can hire Start Bootstrap to create a custom build of any template, or create something from scratch using Bootstrap. For more information, visit the **[custom design services page](https://startbootstrap.com/bootstrap-design-services/)**.
+### Screenshots
 
-## About
+This section contains screenshots of each page that must be built, at varying screen widths. These are a guide; you can meet the requirements without having the pages look exactly like the below images.
 
-Start Bootstrap is an open source library of free Bootstrap templates and themes. All of the free templates and themes on Start Bootstrap are released under the MIT license, which means you can use them for any purpose, even for commercial projects.
+#### Landing page
 
-* https://startbootstrap.com
-* https://twitter.com/SBootstrap
+Large screen:
+![Landing page large screen](images/landing-lg.png)
 
-Start Bootstrap was created by and is maintained by **[David Miller](http://davidmiller.io/)**, Owner of [Blackrock Digital](http://blackrockdigital.io/).
+Small screen:
+![Landing page small screen](images/landing-sm.png)
+￼
 
-* http://davidmiller.io
-* https://twitter.com/davidmillerskt
-* https://github.com/davidtmiller
+#### Comparisons page
 
-Start Bootstrap is based on the [Bootstrap](http://getbootstrap.com/) framework created by [Mark Otto](https://twitter.com/mdo) and [Jacob Thorton](https://twitter.com/fat).
+Large screen:
+![comparison page large screen](images/comparison-lg.png)
 
-## Copyright and License
+Small screen:
+![comparison page small screen](images/comparison-sm.png)
 
-Copyright 2013-2018 Blackrock Digital LLC. Code released under the [MIT](https://github.com/BlackrockDigital/startbootstrap-new-age/blob/gh-pages/LICENSE) license.
+#### Data page
+
+Large screen:
+![data page large screen](images/data-lg.png)
+
+Small screen:
+![data page small screen](images/data-sm.png)
+
+#### Visualization pages
+
+You'll build four of these, one for each visualization. Here's an example of one:
+
+Large screen:
+![visualize page large screen](images/visualize-lg.png)
+
+Small screen:
+![visualize page small screen](images/visualize-sm.png)
+
+#### Navigation menu
+
+Large screen:
+![nav menu large screen](images/nav-lg.png)
+
+Small screen:
+![nav menu small screen](images/nav-sm.png)
