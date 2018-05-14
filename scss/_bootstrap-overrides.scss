@@ -28,6 +28,24 @@
     }
 }
 
+.btn-outline-inv {
+    color: #fdcc52;
+    border: 1px solid;
+    border-color: #fdcc52;
+    &:hover,
+    &:focus,
+    &:active,
+    &.active {
+        color: white;
+        border-color: $theme-primary;
+        background-color: $theme-primary;
+    }
+}
+
+
+
+
+
 .btn {
     border-radius: 300px;
     @include alt-font;
