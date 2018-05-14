@@ -424,6 +424,18 @@ footer ul li a:hover, footer ul li a:focus, footer ul li a:active, footer ul li 
   background-color: #fdcc52;
 }
 
+.btn-outline-inv {
+  color: #fdcc52;
+  border: 1px solid;
+  border-color: #fdcc52;
+}
+
+.btn-outline-inv:hover, .btn-outline-inv:focus, .btn-outline-inv:active, .btn-outline-inv.active {
+  color: white;
+  border-color: #fdcc52;
+  background-color: #fdcc52;
+}
+
 .btn {
   border-radius: 300px;
   font-family: 'Lato', 'Helvetica', 'Arial', 'sans-serif';
