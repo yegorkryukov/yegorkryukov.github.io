@@ -42,15 +42,20 @@ function handleSearchButtonClick() {
   // Format the user's search by removing leading and trailing whitespace, lowercase the string
   var filterSearch = $searchInput.value.trim().toLowerCase();
 
-  // Set filteredAddresses to an array of all addresses whose "state" matches the filter
-  data = dataSet.filter(function(record) {
-    var dateTime = record.datetime.toLowerCase();
+  // If search is empty return the whole data
 
-    // If true, add the address to the filteredAddresses, otherwise don't add it to filteredAddresses
-    return dateTime === filterSearch;
-  });
+  if (filterSearch.length == 0){
+    data = dataSet
+  }
+  else {
+    data = dataSet.filter(function(record) {
+      var dateTime = record.datetime.toLowerCase();
+
+      return dateTime === filterSearch;
+    });
+  }
   renderTable();
-}
+};
 
 // Render the table for the first time on page load
 renderTable();
