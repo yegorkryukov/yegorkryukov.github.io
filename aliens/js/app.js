@@ -1,24 +1,81 @@
 // Get references to the tbody element, input field and button
 var $tbody = document.querySelector("tbody");
-var $searchInput = document.querySelector("#searchBox");
-var $searchBtn = document.querySelector("#searchBtn");
+const form = document.getElementsByClassName('search-form')[0];
 
-// Add an event listener to the searchButton, call handleSearchButtonClick when clicked
-$searchBtn.addEventListener("click", handleSearchButtonClick);
-
-// Execute a function when the user releases a key on the keyboard
-$searchInput.addEventListener("keydown", function(event) {
-  // Cancel the default action, if needed
-  // event.preventDefault();
-  // Number 13 is the "Enter" key on the keyboard
-  if (event.keyCode === 13) {
-    // Trigger the button element with a click
-    $searchBtn.click();
-  }
-});
-
-// Set filteredAddresses to addressData initially
+// Set the whole table to show up initially
 var data = dataSet;
+
+// /**
+//  * Funtion to work with enter press on every field of the form
+//  */
+// $formFields.forEach(function(elem) {
+//   elem.addEventListener("keydown", function(event) {
+//     // Number 13 is the "Enter" key on the keyboard
+//     if (event.keyCode === 13) {
+//       // Trigger the button element with a click
+//       // Need to create a dict with all search queries before calling the func
+//       var filterSearch = $searchDatetime.value.trim().toLowerCase();
+//       $searchBtn.click();
+//     };
+//   });
+// });
+
+/**
+ * Checks that an element has a non-empty `name` and `value` property.
+ * @param  {Element} element  the element to check
+ * @return {Bool}             true if the element is an input, false if not
+ */
+const isValidElement = element => {
+  return element.name && element.value;
+};
+
+/**
+ * Retrieves input data from a form and returns it as a JSON object.
+ * @param  {HTMLFormControlsCollection} elements  the form elements
+ * @return {Object}                     form data as an object literal
+ */
+const formToJSON = elements => [].reduce.call(elements, (data, element) => {
+  // Make sure the element has the required properties.
+  if (isValidElement(element)) {
+    data[element.name] = element.value.trim().toLowerCase();
+  }
+  return data;
+}, {});
+
+/**
+ * A handler function to prevent default submission and run our custom script.
+ * @param  {Event} event  the submit event triggered by the user
+ * @return {void}
+ */
+function handleFormSubmit(event) {
+  // Stop the form from submitting since we’re handling that with AJAX.
+  event.preventDefault();
+  
+  // TODO: Call our function to get the form data.
+  const searchData = formToJSON(form.elements);
+  console.log('SearchData:', searchData)
+
+  // If search is empty return the whole data
+  if (Object.keys(searchData).length === 0 && searchData.constructor === Object){
+    console.log('Search is empty')
+    data = dataSet
+  }
+  else {
+    data = dataSet.filter(function(record) {
+      return (
+        record.datetime == searchData.datetime ||
+        record.city === searchData.city ||
+        record.state === searchData.state ||
+        record.country === searchData.country ||
+        record.shape === searchData.shape
+      );
+    });
+  }
+  renderTable();
+};
+
+// Add listener to search button
+form.addEventListener('submit', handleFormSubmit);
 
 // renderTable renders the filteredAddresses to the tbody
 function renderTable() {
@@ -37,25 +94,6 @@ function renderTable() {
     }
   }
 }
-
-function handleSearchButtonClick() {
-  // Format the user's search by removing leading and trailing whitespace, lowercase the string
-  var filterSearch = $searchInput.value.trim().toLowerCase();
-
-  // If search is empty return the whole data
-
-  if (filterSearch.length == 0){
-    data = dataSet
-  }
-  else {
-    data = dataSet.filter(function(record) {
-      var dateTime = record.datetime.toLowerCase();
-
-      return dateTime === filterSearch;
-    });
-  }
-  renderTable();
-};
 
 // Render the table for the first time on page load
 renderTable();
