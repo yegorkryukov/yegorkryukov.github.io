@@ -11,14 +11,31 @@
 
 <body>
   <div class="container">
+    <h2 class="results__heading">Lookup</h2>
     <div class="row">
       <div class="col-md-4">
-        <div class="form-group">
-          <input type="text" class="form-control" id="searchBox" placeholder="Search">
-          <a id="searchBtn" class="btn btn-default">Search</a>
-        </div>
+        <form class="search-form">
+            <div class="form-group">
+              <input type="text" name="datetime" class="form-control" id="datetime" placeholder="Date (M/D/YYYY)">
+            </div>
+            <div class="form-group">
+              <input type="text" name="city" class="form-control" id="city" placeholder="City">
+            </div>
+            <div class="form-group">
+              <input type="text" name="state" class="form-control" id="state" placeholder="State">
+            </div>
+            <div class="form-group">
+              <input type="text" name="coutry" class="form-control" id="coutry" placeholder="Country">
+            </div>
+            <div class="form-group">
+              <input type="text" name="shape" class="form-control" id="shape" placeholder="Shape">
+            </div>
+            <button type="submit" class="btn btn-default" >Search</button>
+        </form>
       </div>
     </div>
+
+
     <div class="row">
       <div class="col-md-12">
         <table class="table table-striped">
