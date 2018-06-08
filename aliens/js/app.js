@@ -1,24 +1,16 @@
 // Get references to the tbody element, input field and button
 var $tbody = document.querySelector("tbody");
 const form = document.getElementsByClassName('search-form')[0];
+var $rowsPerPageSelector = document.getElementById('inputGroupSelect01');
+var $pager = document.getElementById('pager');
+
+// Render first page on load
+var page = 1;
+var rowsPerPage = Number(document.getElementById('inputGroupSelect01').value);
+
 
 // Set the whole table to show up initially
 var data = dataSet;
-
-// /**
-//  * Funtion to work with enter press on every field of the form
-//  */
-// $formFields.forEach(function(elem) {
-//   elem.addEventListener("keydown", function(event) {
-//     // Number 13 is the "Enter" key on the keyboard
-//     if (event.keyCode === 13) {
-//       // Trigger the button element with a click
-//       // Need to create a dict with all search queries before calling the func
-//       var filterSearch = $searchDatetime.value.trim().toLowerCase();
-//       $searchBtn.click();
-//     };
-//   });
-// });
 
 /**
  * Checks that an element has a non-empty `name` and `value` property.
@@ -74,26 +66,59 @@ function handleFormSubmit(event) {
   renderTable();
 };
 
-// Add listener to search button
+function handleRowsSelect(){
+  rowsPerPage = Number(document.getElementById('inputGroupSelect01').value);
+  page = 1;
+  renderTable();
+};
+
+// page selector
+function handlePageClick(event){
+  console.log(event.currentTarget);
+  page = Number(event.target.innerHTML);
+  event.target.className = 'page-item active';
+  renderTable();
+};
+
+// Add listeners
 form.addEventListener('submit', handleFormSubmit);
+$rowsPerPageSelector.addEventListener('click', handleRowsSelect);
+$pager.addEventListener('click', handlePageClick);
 
 // renderTable renders the filteredAddresses to the tbody
 function renderTable() {
+  var rows = data.length;
+  var pages = Math.ceil(parseFloat(rows/rowsPerPage));
+
+  // build pagination
+  $pager.innerHTML = '';
+
+  for (var j = 1; j<=pages; j++){
+    var pageNumber = document.createElement('li',);
+    var a = document.createElement('a');
+    pageNumber.className = 'page-item';
+    a.textContent = j;
+    a.className = 'page-link';
+    // a.onclick = handlePageClick();
+    a.href = '#';
+    pageNumber.id = j;
+    pageNumber.appendChild(a);
+    $pager.appendChild(pageNumber);
+  };
+
   $tbody.innerHTML = "";
-  for (var i = 0; i < data.length; i++) {
-    // Get get the current address object and its fields
+
+  for (var i = (page-1)*rowsPerPage; i < page*rowsPerPage; i++) {
     var record = data[i];
     var fields = Object.keys(record);
-    // Create a new row in the tbody, set the index to be i + startingIndex
-    var $row = $tbody.insertRow(i);
+    var $row = $tbody.insertRow(record);
     for (var j = 0; j < fields.length; j++) {
-      // For every field in the address object, create a new cell at set its inner text to be the current value at the current address's field
       var field = fields[j];
       var $cell = $row.insertCell(j);
       $cell.innerText = record[field];
     }
   }
-}
+};
 
 // Render the table for the first time on page load
 renderTable();
