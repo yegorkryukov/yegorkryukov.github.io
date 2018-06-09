@@ -74,9 +74,8 @@ function handleRowsSelect(){
 
 // page selector
 function handlePageClick(event){
-  console.log(event.currentTarget);
-  page = Number(event.target.innerHTML);
-  event.target.className = 'page-item active';
+  a = event.target
+  page = Number(a.innerHTML);
   renderTable();
 };
 
@@ -94,13 +93,18 @@ function renderTable() {
   $pager.innerHTML = '';
 
   for (var j = 1; j<=pages; j++){
-    var pageNumber = document.createElement('li',);
+    // create link element for pagination
     var a = document.createElement('a');
-    pageNumber.className = 'page-item';
     a.textContent = j;
     a.className = 'page-link';
-    // a.onclick = handlePageClick();
     a.href = '#';
+    // create list item for pagination
+    var pageNumber = document.createElement('li');
+    if (page == j){
+      pageNumber.className = 'page-link active';
+    } else {
+      pageNumber.className = 'page-link';
+    };
     pageNumber.id = j;
     pageNumber.appendChild(a);
     $pager.appendChild(pageNumber);
