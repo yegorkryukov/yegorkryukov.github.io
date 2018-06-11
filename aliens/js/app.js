@@ -1,3 +1,5 @@
+$.getJSON( "js/data.js", function( dataSet ){
+
 // Get references to the tbody element, input field and button
 var $tbody = document.querySelector("tbody");
 const form = document.getElementsByClassName('search-form')[0];
@@ -126,3 +128,5 @@ function renderTable() {
 
 // Render the table for the first time on page load
 renderTable();
+
+});
