@@ -1,320 +1,300 @@
 <!DOCTYPE html>
 <html lang="en">
 
-  <head>
+<head>
 
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
 
-    <title>Mind That Data LLC</title>
+  <title>Resume - Start Bootstrap Theme</title>
 
-    <!-- Bootstrap core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- Custom fonts for this template -->
-    <link rel="stylesheet" href="vendor/font-awesome/css/font-awesome.min.css">
-    <link rel="stylesheet" href="vendor/simple-line-icons/css/simple-line-icons.css">
-    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
+  <!-- Custom fonts for this template -->
+  <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet">
+  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
 
-    <!-- Plugin CSS -->
-    <link rel="stylesheet" href="device-mockups/device-mockups.min.css">
+  <!-- Custom styles for this template -->
+  <link href="css/resume.min.css" rel="stylesheet">
 
-    <!-- Custom styles for this template -->
-    <link href="css/new-age.min.css" rel="stylesheet">
+</head>
 
-    <!-- Bootstrap core JavaScript -->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<body id="page-top">
 
-    <!-- Plugin JavaScript -->
-    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
-    
-    <!-- Custom scripts to load external html table -->
-    <script> 
-      $(function(){
-        $("#includedContent").load("resources/table.html"); 
-      });
-    </script> 
-  </head>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
+    <a class="navbar-brand js-scroll-trigger" href="#page-top">
+      <span class="d-block d-lg-none">Clarence Taylor</span>
+      <span class="d-none d-lg-block">
+        <img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="img/profile.jpg" alt="">
+      </span>
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link js-scroll-trigger" href="#about">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link js-scroll-trigger" href="#experience">Experience</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link js-scroll-trigger" href="#education">Education</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link js-scroll-trigger" href="#skills">Skills</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link js-scroll-trigger" href="#interests">Interests</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link js-scroll-trigger" href="#awards">Awards</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
 
-  <body id="page-top">
+  <div class="container-fluid p-0">
 
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
-      <div class="container">
-        <a class="navbar-brand js-scroll-trigger" href="#page-top">mindthatdata.com</a>
-        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-          Menu
-          <i class="fa fa-bars"></i>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item dropdown ">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Plots
-              </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item js-scroll-trigger" href="#plot1">Temperature vs Latitude</a>
-              <a class="dropdown-item js-scroll-trigger" href="#plot2">Cloudiness vs Latitude</a>
-              <a class="dropdown-item js-scroll-trigger" href="#plot3">Wind Speed vs Latitude</a>
-              <a class="dropdown-item js-scroll-trigger" href="#plot4">Humidity vs Latitude</a>
-            </div>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#comparison">Comparison</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#data">Data</a>
-            </li>
-            <li class="nav-item list-inline-item">
-              <a href="https://twitter.com/MindThatData" target="_blank">
-                <i class="fa fa-twitter"></i>
-              </a>
-            </li>
-            <li class="nav-item list-inline-item">
-              <a href="https://github.com/yegorkryukov" target="_blank">
-                <i class="fa fa-github"></i>
-              </a>
-            </li>
-            <li class="nav-item list-inline-item">
-              <a href="https://www.linkedin.com/in/ykryukov/" target="_blank">
-                <i class="fa fa-linkedin"></i>
-              </a>
-            </li>
-            <li class="nav-item list-inline-item">
-              <a href="mailto:y@mindthatdata.com?subject=from MTD:" target="_blank">
-                <i class="fa fa-envelope-o"></i>
-              </a>
-            </li>
-            </li>
-          </ul>
+    <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="about">
+      <div class="w-100">
+        <h1 class="mb-0">Clarence
+          <span class="text-primary">Taylor</span>
+        </h1>
+        <div class="subheading mb-5">3542 Berry Street · Cheyenne Wells, CO 80810 · (317) 585-8468 ·
+          <a href="mailto:name@email.com">name@email.com</a>
         </div>
-      </div>
-    </nav>
-
-    <header class="masthead">
-      <div class="container h-100">
-        <div class="row h-100">
-          <div class="col-lg-5 my-auto">
-            <div class="header-content mx-auto">
-              <h1 class="mb-5">Whether financial, political, or social – data's true power lies in its ability to answer questions definitively. </h1>
-              <a href="#comparison" class="btn btn-outline btn-xl js-scroll-trigger">See it all</a>
-            </div>
-          </div>
-          <div class="col-lg-7 my-auto">
-            <div class="container">
-              <div class="device-mockup macbook_2015 landscape">
-                <div class="device">
-                  <div class="screen">
-                    <img src="img/pairgrid.png" class="img-fluid" alt="Pairgrid plot">
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </header>
-
-    <section class="download bg-primary" id="comparison">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-6 mx-auto">
-            <div class="screen">
-              <img src="img/pairgrid.png" class="img-fluid rounded" alt="Pairgrid Plot" data-toggle="modal" data-target="#modal1">
-              <div class="modal fade" id="modal1" tabindex="-1" role="dialog" aria-labelledby="ModalCenterTitle" aria-hidden="true">
-                <div class="modal-dialog modal-lg">
-                  <div class="modal-content">
-                    <div class="modal-header">
-                      <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                    </div>
-                    <div class="modal-body">
-                      <img src="img/pairgrid.png" class="img-fluid rounded" alt="Pairgrid Plot">
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6 mx-auto">
-            <h3 class="section-heading">Weather vs latitude</h3>
-            <p>What's the weather like as we approach the equator?  You may be thinking: "Duh. It gets hotter..."  But, if pressed, how would you <strong>prove</strong> it?</p>
-            <p>In this project we are pulling weather data for 500 randomly selected cities across the globe from <a style='color:#8856a7' href="https://openweathermap.org/api" target="_blank">OpenWeatherMap API</a>.  Specifically we are looking into: temperature, humidity, cloudiness and wind speed.</p>
-            <p>Let's use <a style='color:#8856a7'  href='https://seaborn.pydata.org/tutorial/axis_grids.html#plotting-pairwise-relationships-in-a-dataset' target="_blank">Seaborn's Pairgrid</a> first to plot pairwise relationships in the dataset with distribution on the diagonal.  This type of visual representation, also called <a style='color:#8856a7' href="https://en.wikipedia.org/wiki/Small_multiple" target="_blank">Small multiple</a> allows quickly extract a lot of information about relationships between variables in a dataset.</p>
-            <p>Distribution data suggests that we live on a rather hot humid planet with fewer clouds.  Suprisingly to me it's a bit more humid when there are less clouds.  The temperature rises too when sky is clear.</p>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-12 mx-auto">
-            <p>Plot also suggests that the air gets dryer as temperature drops.  Fun fact: the scatter plot of latitude vs longitude shows us the planet.  The only strong correlation is between latitude and temperature–we can see an bow-like ark with the peak around 0º also know as Equator.  Simple scatter plots are boring: let's plot our data on a real map!</p>
-            <a href="#plot1" class="btn btn-outline btn-xl js-scroll-trigger">See the plots</a>
-          </div>
+        <p class="lead mb-5">I am experienced in leveraging agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition.</p>
+        <div class="social-icons">
+          <a href="#">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+          <a href="#">
+            <i class="fab fa-github"></i>
+          </a>
+          <a href="#">
+            <i class="fab fa-twitter"></i>
+          </a>
+          <a href="#">
+            <i class="fab fa-facebook-f"></i>
+          </a>
         </div>
       </div>
     </section>
 
-    <section class="features" id="plot1">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-6 my-auto">
-            <p>It's the same scatter plot but rendered on top of a map.  The arc we observed prior is represented as yellowish colors alonside equator.  The data was pulled on May 12, 2017 and as we can see it's still pretty cold above 60º in northern hemisphere.  Too bad for Russians and Canadians.</p>
-            <a href="#plot2" class="btn btn-outline-inv btn-xl js-scroll-trigger">Next</a>
+    <hr class="m-0">
+
+    <section class="resume-section p-3 p-lg-5 d-flex justify-content-center" id="experience">
+      <div class="w-100">
+        <h2 class="mb-5">Experience</h2>
+
+        <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
+          <div class="resume-content">
+            <h3 class="mb-0">Senior Web Developer</h3>
+            <div class="subheading mb-3">Intelitec Solutions</div>
+            <p>Bring to the table win-win survival strategies to ensure proactive domination. At the end of the day, going forward, a new normal that has evolved from generation X is on the runway heading towards a streamlined cloud solution. User generated content in real-time will have multiple touchpoints for offshoring.</p>
           </div>
-          <div class="col-lg-6 my-auto">
-            <div class="screen">
-              <img src="img/Temperature vs Latitude.png" class="img-fluid rounded" alt="Temperature vs Latitude" data-toggle="modal" data-target="#modal2">
-              <div class="modal fade" id="modal2" tabindex="-1" role="dialog" aria-labelledby="ModalCenterTitle" aria-hidden="true">
-                <div class="modal-dialog modal-lg">
-                  <div class="modal-content">
-                    <div class="modal-header">
-                      <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                    </div>
-                    <div class="modal-body">
-                      <img src="img/Temperature vs Latitude.png" class="img-fluid rounded" alt="Temperature vs Latitude">
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+          <div class="resume-date text-md-right">
+            <span class="text-primary">March 2013 - Present</span>
           </div>
         </div>
+
+        <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
+          <div class="resume-content">
+            <h3 class="mb-0">Web Developer</h3>
+            <div class="subheading mb-3">Intelitec Solutions</div>
+            <p>Capitalize on low hanging fruit to identify a ballpark value added activity to beta test. Override the digital divide with additional clickthroughs from DevOps. Nanotechnology immersion along the information highway will close the loop on focusing solely on the bottom line.</p>
+          </div>
+          <div class="resume-date text-md-right">
+            <span class="text-primary">December 2011 - March 2013</span>
+          </div>
+        </div>
+
+        <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
+          <div class="resume-content">
+            <h3 class="mb-0">Junior Web Designer</h3>
+            <div class="subheading mb-3">Shout! Media Productions</div>
+            <p>Podcasting operational change management inside of workflows to establish a framework. Taking seamless key performance indicators offline to maximise the long tail. Keeping your eye on the ball while performing a deep dive on the start-up mentality to derive convergence on cross-platform integration.</p>
+          </div>
+          <div class="resume-date text-md-right">
+            <span class="text-primary">July 2010 - December 2011</span>
+          </div>
+        </div>
+
+        <div class="resume-item d-flex flex-column flex-md-row justify-content-between">
+          <div class="resume-content">
+            <h3 class="mb-0">Web Design Intern</h3>
+            <div class="subheading mb-3">Shout! Media Productions</div>
+            <p>Collaboratively administrate empowered markets via plug-and-play networks. Dynamically procrastinate B2C users after installed base benefits. Dramatically visualize customer directed convergence without revolutionary ROI.</p>
+          </div>
+          <div class="resume-date text-md-right">
+            <span class="text-primary">September 2008 - June 2010</span>
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+
+    <hr class="m-0">
+
+    <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="education">
+      <div class="w-100">
+        <h2 class="mb-5">Education</h2>
+
+        <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
+          <div class="resume-content">
+            <h3 class="mb-0">University of Colorado Boulder</h3>
+            <div class="subheading mb-3">Bachelor of Science</div>
+            <div>Computer Science - Web Development Track</div>
+            <p>GPA: 3.23</p>
+          </div>
+          <div class="resume-date text-md-right">
+            <span class="text-primary">August 2006 - May 2010</span>
+          </div>
+        </div>
+
+        <div class="resume-item d-flex flex-column flex-md-row justify-content-between">
+          <div class="resume-content">
+            <h3 class="mb-0">James Buchanan High School</h3>
+            <div class="subheading mb-3">Technology Magnet Program</div>
+            <p>GPA: 3.56</p>
+          </div>
+          <div class="resume-date text-md-right">
+            <span class="text-primary">August 2002 - May 2006</span>
+          </div>
+        </div>
+
       </div>
     </section>
 
-    <section class="download bg-primary" id="plot2">
-      <div class="container">
-        <div class="row">       
-            <div class="col-lg-6 my-auto">
-              <div class="screen">
-                <img src="img/Cloudiness vs Latitude.png" class="img-fluid rounded" alt="Cloudiness vs Latitude" data-toggle="modal" data-target="#modal3">
-                <div class="modal fade" id="modal3" tabindex="-1" role="dialog" aria-labelledby="ModalCenterTitle" aria-hidden="true">
-                  <div class="modal-dialog modal-lg">
-                    <div class="modal-content">
-                      <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                      </div>
-                      <div class="modal-body">
-                        <img src="img/Cloudiness vs Latitude.png" class="img-fluid rounded" alt="Cloudiness vs Latitude">
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-6 mx-auto">
-            <p>As we already saw it's pretty clear sky everywhere.  It's a bit of a surprise too because all the images from the space show our planet as mostly cloudy.  Right!  The reason is that the data we pulled is from the cities and the <a style='color:#8856a7' href="https://www.oceanicinstitute.org/aboutoceans/aquafacts.html">oceans cover 71% of Earth's surface</a>.  Our observation re fewer clouds might be wrong.</p>
-            <a href="#plot3" class="btn btn-outline btn-xl js-scroll-trigger">Next</a>
-          </div>
-          
-        </div>
+    <hr class="m-0">
+
+    <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="skills">
+      <div class="w-100">
+        <h2 class="mb-5">Skills</h2>
+
+        <div class="subheading mb-3">Programming Languages &amp; Tools</div>
+        <ul class="list-inline dev-icons">
+          <li class="list-inline-item">
+            <i class="fab fa-html5"></i>
+          </li>
+          <li class="list-inline-item">
+            <i class="fab fa-css3-alt"></i>
+          </li>
+          <li class="list-inline-item">
+            <i class="fab fa-js-square"></i>
+          </li>
+          <li class="list-inline-item">
+            <i class="fab fa-angular"></i>
+          </li>
+          <li class="list-inline-item">
+            <i class="fab fa-react"></i>
+          </li>
+          <li class="list-inline-item">
+            <i class="fab fa-node-js"></i>
+          </li>
+          <li class="list-inline-item">
+            <i class="fab fa-sass"></i>
+          </li>
+          <li class="list-inline-item">
+            <i class="fab fa-less"></i>
+          </li>
+          <li class="list-inline-item">
+            <i class="fab fa-wordpress"></i>
+          </li>
+          <li class="list-inline-item">
+            <i class="fab fa-gulp"></i>
+          </li>
+          <li class="list-inline-item">
+            <i class="fab fa-grunt"></i>
+          </li>
+          <li class="list-inline-item">
+            <i class="fab fa-npm"></i>
+          </li>
+        </ul>
+
+        <div class="subheading mb-3">Workflow</div>
+        <ul class="fa-ul mb-0">
+          <li>
+            <i class="fa-li fa fa-check"></i>
+            Mobile-First, Responsive Design</li>
+          <li>
+            <i class="fa-li fa fa-check"></i>
+            Cross Browser Testing &amp; Debugging</li>
+          <li>
+            <i class="fa-li fa fa-check"></i>
+            Cross Functional Teams</li>
+          <li>
+            <i class="fa-li fa fa-check"></i>
+            Agile Development &amp; Scrum</li>
+        </ul>
       </div>
     </section>
 
-    <section class="features" id="plot3">
-      <div class="container">
-        <div class="row">
-            <div class="col-lg-6 my-auto">
-              <p>Wind speed seems to be all over with no definitive correlation.  Let's not forget the data is from the cities and not the entire surface of Earth.</p>
-              <a href="#plot4" class="btn btn-outline-inv btn-xl js-scroll-trigger">Next</a>
-            </div>
-            <div class="col-lg-6 my-auto">
-              <div class="screen">
-                <img src="img/Wind Speed vs Latitude.png" class="img-fluid rounded" alt="Wind Speed vs Latitude" data-toggle="modal" data-target="#modal4">
-                <div class="modal fade" id="modal4" tabindex="-1" role="dialog" aria-labelledby="ModalCenterTitle" aria-hidden="true">
-                  <div class="modal-dialog modal-lg">
-                    <div class="modal-content">
-                      <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                      </div>
-                      <div class="modal-body">
-                        <img src="img/Wind Speed vs Latitude.png" class="img-fluid rounded" alt="Wind Speed vs Latitude">
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+    <hr class="m-0">
+
+    <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="interests">
+      <div class="w-100">
+        <h2 class="mb-5">Interests</h2>
+        <p>Apart from being a web developer, I enjoy most of my time being outdoors. In the winter, I am an avid skier and novice ice climber. During the warmer months here in Colorado, I enjoy mountain biking, free climbing, and kayaking.</p>
+        <p class="mb-0">When forced indoors, I follow a number of sci-fi and fantasy genre movies and television shows, I am an aspiring chef, and I spend a large amount of my free time exploring the latest technology advancements in the front-end web development world.</p>
       </div>
     </section>
 
-    <section class="download bg-primary" id="plot4">
-      <div class="container">
-        <div class="row">       
-            <div class="col-lg-6 my-auto">
-              <div class="screen">
-                <img src="img/Humidity vs Latitude.png" class="img-fluid rounded" alt="Humidity vs Latitude" data-toggle="modal" data-target="#modal5">
-                <div class="modal fade" id="modal5" tabindex="-1" role="dialog" aria-labelledby="ModalCenterTitle" aria-hidden="true">
-                  <div class="modal-dialog modal-lg">
-                    <div class="modal-content">
-                      <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                      </div>
-                      <div class="modal-body">
-                        <img src="img/Humidity vs Latitude.png" class="img-fluid rounded" alt="Humidity vs Latitude">
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-6 mx-auto">
-            <p>The plot suggests it's pretty humid along the coast line.  The map representation versus regular scatter plot also allows us to spot some outliers: North-Western coast of Australia and Pacific coast of Mexico.  Maybe it was a cloudy day?  In fact it was!  Look at the <a style='color:#8856a7' href="#plot2" class="js-scroll-trigger">clouds plot</a> above.  The same regions were cloudy.</p>
-            <p>Let's look at the data used to build the plots.</p>
-            <a href="#data" class="btn btn-outline btn-xl js-scroll-trigger">See the dataset</a>
-          </div>
-        </div>
-      </div>
-    </section>
-  
-    <section class="features" id="data">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-12 header-content my-auto">
-            <h2 class="text-center">Data</h2>
-          </div>
-          <div class="col-lg-6 my-auto">
-            <p>The four map plots as simple scatter plots are left for the reference.  All the data used for this project can be found in the table below.</p>
-            <p>All the code for this project can be found on the <a style='color:#8856a7' href="https://github.com/yegorkryukov/python-challenge/tree/master/WeatherPy" target="_blank">Github Repository</a>.</p>
-          </div>
-          <div class="col-lg-6 my-auto">
-            <div class="screen">
-              <img src="img/all.png" class="img-fluid rounded" alt="Four scatter plots" data-toggle="modal" data-target="#modal6">
-              <div class="modal fade" id="modal6" tabindex="-1" role="dialog" aria-labelledby="ModalCenterTitle" aria-hidden="true">
-                <div class="modal-dialog modal-lg">
-                  <div class="modal-content">
-                    <div class="modal-header">
-                      <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                    </div>
-                    <div class="modal-body">
-                      <img src="img/all.png" class="img-fluid rounded" alt="Four scatter plots">
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-            <table class="table col-lg-12 my-auto"id="includedContent"></table>
+    <hr class="m-0">
 
-        </div>
+    <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="awards">
+      <div class="w-100">
+        <h2 class="mb-5">Awards &amp; Certifications</h2>
+        <ul class="fa-ul mb-0">
+          <li>
+            <i class="fa-li fa fa-trophy text-warning"></i>
+            Google Analytics Certified Developer</li>
+          <li>
+            <i class="fa-li fa fa-trophy text-warning"></i>
+            Mobile Web Specialist - Google Certification</li>
+          <li>
+            <i class="fa-li fa fa-trophy text-warning"></i>
+            1<sup>st</sup>
+            Place - University of Colorado Boulder - Emerging Tech Competition 2009</li>
+          <li>
+            <i class="fa-li fa fa-trophy text-warning"></i>
+            1<sup>st</sup>
+            Place - University of Colorado Boulder - Adobe Creative Jam 2008 (UI Design Category)</li>
+          <li>
+            <i class="fa-li fa fa-trophy text-warning"></i>
+            2<sup>nd</sup>
+            Place - University of Colorado Boulder - Emerging Tech Competition 2008</li>
+          <li>
+            <i class="fa-li fa fa-trophy text-warning"></i>
+            1<sup>st</sup>
+            Place - James Buchanan High School - Hackathon 2006</li>
+          <li>
+            <i class="fa-li fa fa-trophy text-warning"></i>
+            3<sup>rd</sup>
+            Place - James Buchanan High School - Hackathon 2005</li>
+        </ul>
       </div>
     </section>
 
-    <footer>
-      <div class="container">
-        <p>&copy; Yegor Kryukov 2018</p>
-      </div>
-    </footer>
+  </div>
 
-    <!-- Custom scripts for this template -->
-    <script src="js/new-age.min.js"></script>
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
-  </body>
+  <!-- Plugin JavaScript -->
+  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+  <!-- Custom scripts for this template -->
+  <script src="js/resume.min.js"></script>
+
+</body>
 
 </html>
