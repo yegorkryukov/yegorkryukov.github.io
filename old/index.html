@@ -1,8 +1,320 @@
----
-layout: default
-title: Yegor Kryukov
----
-<div class="blurb">
-	
-	
-</div><!-- /.blurb -->
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Mind That Data LLC</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link rel="stylesheet" href="vendor/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="vendor/simple-line-icons/css/simple-line-icons.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
+
+    <!-- Plugin CSS -->
+    <link rel="stylesheet" href="device-mockups/device-mockups.min.css">
+
+    <!-- Custom styles for this template -->
+    <link href="css/new-age.min.css" rel="stylesheet">
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+    
+    <!-- Custom scripts to load external html table -->
+    <script> 
+      $(function(){
+        $("#includedContent").load("resources/table.html"); 
+      });
+    </script> 
+  </head>
+
+  <body id="page-top">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+      <div class="container">
+        <a class="navbar-brand js-scroll-trigger" href="#page-top">mindthatdata.com</a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          Menu
+          <i class="fa fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item dropdown ">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Plots
+              </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item js-scroll-trigger" href="#plot1">Temperature vs Latitude</a>
+              <a class="dropdown-item js-scroll-trigger" href="#plot2">Cloudiness vs Latitude</a>
+              <a class="dropdown-item js-scroll-trigger" href="#plot3">Wind Speed vs Latitude</a>
+              <a class="dropdown-item js-scroll-trigger" href="#plot4">Humidity vs Latitude</a>
+            </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#comparison">Comparison</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#data">Data</a>
+            </li>
+            <li class="nav-item list-inline-item">
+              <a href="https://twitter.com/MindThatData" target="_blank">
+                <i class="fa fa-twitter"></i>
+              </a>
+            </li>
+            <li class="nav-item list-inline-item">
+              <a href="https://github.com/yegorkryukov" target="_blank">
+                <i class="fa fa-github"></i>
+              </a>
+            </li>
+            <li class="nav-item list-inline-item">
+              <a href="https://www.linkedin.com/in/ykryukov/" target="_blank">
+                <i class="fa fa-linkedin"></i>
+              </a>
+            </li>
+            <li class="nav-item list-inline-item">
+              <a href="mailto:y@mindthatdata.com?subject=from MTD:" target="_blank">
+                <i class="fa fa-envelope-o"></i>
+              </a>
+            </li>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <header class="masthead">
+      <div class="container h-100">
+        <div class="row h-100">
+          <div class="col-lg-5 my-auto">
+            <div class="header-content mx-auto">
+              <h1 class="mb-5">Whether financial, political, or social – data's true power lies in its ability to answer questions definitively. </h1>
+              <a href="#comparison" class="btn btn-outline btn-xl js-scroll-trigger">See it all</a>
+            </div>
+          </div>
+          <div class="col-lg-7 my-auto">
+            <div class="container">
+              <div class="device-mockup macbook_2015 landscape">
+                <div class="device">
+                  <div class="screen">
+                    <img src="img/pairgrid.png" class="img-fluid" alt="Pairgrid plot">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section class="download bg-primary" id="comparison">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 mx-auto">
+            <div class="screen">
+              <img src="img/pairgrid.png" class="img-fluid rounded" alt="Pairgrid Plot" data-toggle="modal" data-target="#modal1">
+              <div class="modal fade" id="modal1" tabindex="-1" role="dialog" aria-labelledby="ModalCenterTitle" aria-hidden="true">
+                <div class="modal-dialog modal-lg">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                    </div>
+                    <div class="modal-body">
+                      <img src="img/pairgrid.png" class="img-fluid rounded" alt="Pairgrid Plot">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 mx-auto">
+            <h3 class="section-heading">Weather vs latitude</h3>
+            <p>What's the weather like as we approach the equator?  You may be thinking: "Duh. It gets hotter..."  But, if pressed, how would you <strong>prove</strong> it?</p>
+            <p>In this project we are pulling weather data for 500 randomly selected cities across the globe from <a style='color:#8856a7' href="https://openweathermap.org/api" target="_blank">OpenWeatherMap API</a>.  Specifically we are looking into: temperature, humidity, cloudiness and wind speed.</p>
+            <p>Let's use <a style='color:#8856a7'  href='https://seaborn.pydata.org/tutorial/axis_grids.html#plotting-pairwise-relationships-in-a-dataset' target="_blank">Seaborn's Pairgrid</a> first to plot pairwise relationships in the dataset with distribution on the diagonal.  This type of visual representation, also called <a style='color:#8856a7' href="https://en.wikipedia.org/wiki/Small_multiple" target="_blank">Small multiple</a> allows quickly extract a lot of information about relationships between variables in a dataset.</p>
+            <p>Distribution data suggests that we live on a rather hot humid planet with fewer clouds.  Suprisingly to me it's a bit more humid when there are less clouds.  The temperature rises too when sky is clear.</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12 mx-auto">
+            <p>Plot also suggests that the air gets dryer as temperature drops.  Fun fact: the scatter plot of latitude vs longitude shows us the planet.  The only strong correlation is between latitude and temperature–we can see an bow-like ark with the peak around 0º also know as Equator.  Simple scatter plots are boring: let's plot our data on a real map!</p>
+            <a href="#plot1" class="btn btn-outline btn-xl js-scroll-trigger">See the plots</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="features" id="plot1">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6 my-auto">
+            <p>It's the same scatter plot but rendered on top of a map.  The arc we observed prior is represented as yellowish colors alonside equator.  The data was pulled on May 12, 2017 and as we can see it's still pretty cold above 60º in northern hemisphere.  Too bad for Russians and Canadians.</p>
+            <a href="#plot2" class="btn btn-outline-inv btn-xl js-scroll-trigger">Next</a>
+          </div>
+          <div class="col-lg-6 my-auto">
+            <div class="screen">
+              <img src="img/Temperature vs Latitude.png" class="img-fluid rounded" alt="Temperature vs Latitude" data-toggle="modal" data-target="#modal2">
+              <div class="modal fade" id="modal2" tabindex="-1" role="dialog" aria-labelledby="ModalCenterTitle" aria-hidden="true">
+                <div class="modal-dialog modal-lg">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                    </div>
+                    <div class="modal-body">
+                      <img src="img/Temperature vs Latitude.png" class="img-fluid rounded" alt="Temperature vs Latitude">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="download bg-primary" id="plot2">
+      <div class="container">
+        <div class="row">       
+            <div class="col-lg-6 my-auto">
+              <div class="screen">
+                <img src="img/Cloudiness vs Latitude.png" class="img-fluid rounded" alt="Cloudiness vs Latitude" data-toggle="modal" data-target="#modal3">
+                <div class="modal fade" id="modal3" tabindex="-1" role="dialog" aria-labelledby="ModalCenterTitle" aria-hidden="true">
+                  <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                      </div>
+                      <div class="modal-body">
+                        <img src="img/Cloudiness vs Latitude.png" class="img-fluid rounded" alt="Cloudiness vs Latitude">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 mx-auto">
+            <p>As we already saw it's pretty clear sky everywhere.  It's a bit of a surprise too because all the images from the space show our planet as mostly cloudy.  Right!  The reason is that the data we pulled is from the cities and the <a style='color:#8856a7' href="https://www.oceanicinstitute.org/aboutoceans/aquafacts.html">oceans cover 71% of Earth's surface</a>.  Our observation re fewer clouds might be wrong.</p>
+            <a href="#plot3" class="btn btn-outline btn-xl js-scroll-trigger">Next</a>
+          </div>
+          
+        </div>
+      </div>
+    </section>
+
+    <section class="features" id="plot3">
+      <div class="container">
+        <div class="row">
+            <div class="col-lg-6 my-auto">
+              <p>Wind speed seems to be all over with no definitive correlation.  Let's not forget the data is from the cities and not the entire surface of Earth.</p>
+              <a href="#plot4" class="btn btn-outline-inv btn-xl js-scroll-trigger">Next</a>
+            </div>
+            <div class="col-lg-6 my-auto">
+              <div class="screen">
+                <img src="img/Wind Speed vs Latitude.png" class="img-fluid rounded" alt="Wind Speed vs Latitude" data-toggle="modal" data-target="#modal4">
+                <div class="modal fade" id="modal4" tabindex="-1" role="dialog" aria-labelledby="ModalCenterTitle" aria-hidden="true">
+                  <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                      </div>
+                      <div class="modal-body">
+                        <img src="img/Wind Speed vs Latitude.png" class="img-fluid rounded" alt="Wind Speed vs Latitude">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
+    </section>
+
+    <section class="download bg-primary" id="plot4">
+      <div class="container">
+        <div class="row">       
+            <div class="col-lg-6 my-auto">
+              <div class="screen">
+                <img src="img/Humidity vs Latitude.png" class="img-fluid rounded" alt="Humidity vs Latitude" data-toggle="modal" data-target="#modal5">
+                <div class="modal fade" id="modal5" tabindex="-1" role="dialog" aria-labelledby="ModalCenterTitle" aria-hidden="true">
+                  <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                      </div>
+                      <div class="modal-body">
+                        <img src="img/Humidity vs Latitude.png" class="img-fluid rounded" alt="Humidity vs Latitude">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 mx-auto">
+            <p>The plot suggests it's pretty humid along the coast line.  The map representation versus regular scatter plot also allows us to spot some outliers: North-Western coast of Australia and Pacific coast of Mexico.  Maybe it was a cloudy day?  In fact it was!  Look at the <a style='color:#8856a7' href="#plot2" class="js-scroll-trigger">clouds plot</a> above.  The same regions were cloudy.</p>
+            <p>Let's look at the data used to build the plots.</p>
+            <a href="#data" class="btn btn-outline btn-xl js-scroll-trigger">See the dataset</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  
+    <section class="features" id="data">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 header-content my-auto">
+            <h2 class="text-center">Data</h2>
+          </div>
+          <div class="col-lg-6 my-auto">
+            <p>The four map plots as simple scatter plots are left for the reference.  All the data used for this project can be found in the table below.</p>
+            <p>All the code for this project can be found on the <a style='color:#8856a7' href="https://github.com/yegorkryukov/python-challenge/tree/master/WeatherPy" target="_blank">Github Repository</a>.</p>
+          </div>
+          <div class="col-lg-6 my-auto">
+            <div class="screen">
+              <img src="img/all.png" class="img-fluid rounded" alt="Four scatter plots" data-toggle="modal" data-target="#modal6">
+              <div class="modal fade" id="modal6" tabindex="-1" role="dialog" aria-labelledby="ModalCenterTitle" aria-hidden="true">
+                <div class="modal-dialog modal-lg">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                    </div>
+                    <div class="modal-body">
+                      <img src="img/all.png" class="img-fluid rounded" alt="Four scatter plots">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+            <table class="table col-lg-12 my-auto"id="includedContent"></table>
+
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="container">
+        <p>&copy; Yegor Kryukov 2018</p>
+      </div>
+    </footer>
+
+    <!-- Custom scripts for this template -->
+    <script src="js/new-age.min.js"></script>
+
+  </body>
+
+</html>
